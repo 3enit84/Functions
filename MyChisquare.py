@@ -4,6 +4,8 @@ obs_alt = 1
 obs_tot = 50
 
 def MyChisquare(observed_ref,observed_alt, population_ref, population_alt):
+    import numpy as np
+    from numpy import *
     from scipy.stats import chisquare
     chi_obs = np.array([population_alt,population_ref,observed_alt,observed_ref])#observed values
     exp_population_alt = (population_ref+population_alt)*(population_alt+observed_alt)/\
